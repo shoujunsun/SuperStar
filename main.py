@@ -8,7 +8,7 @@ import time
 import traceback
 from concurrent.futures.thread import ThreadPoolExecutor
 from dataclasses import dataclass
-from queue import PriorityQueue, ShutDown
+from queue import PriorityQueue
 from threading import RLock
 from typing import Any
 
