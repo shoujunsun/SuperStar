@@ -308,7 +308,7 @@ class JobProcessor:
 
         self.task_queue.join()
         time.sleep(0.5)
-        self.task_queue.shutdown()
+        # self.task_queue.shutdown()
 
 
     @log_error
