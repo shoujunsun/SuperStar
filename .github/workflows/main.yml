@@ -15,14 +15,13 @@ jobs:
         uses: actions/checkout@v3  # 用于将github代码仓库的代码拷贝到工作目录中
  
       - name: 设置python环境
-        uses: actions/setup-python@v2 # 用于设置 Python 环境，它允许你指定要在工作环境中使用的 Python 版本
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'  # 选择要用的Python版本
- 
+          python-version: '3.10'
+
       - name: 安装依赖包
-        run: | # 安装依赖包
-          pip install -r ./requirements.txt 
-          
-      
+        run: |
+          pip install -r ./requirements.txt
+
       - name: Run main.py
-        run: python main.py -u 18997637221 -p jldx72215079 -l 248331234 #课程id，默认为心理课的
+        run: python main.py -u ${{ secrets.CHAOXING_USER }} -p ${{ secrets.CHAOXING_PWD }} -l 248331234
